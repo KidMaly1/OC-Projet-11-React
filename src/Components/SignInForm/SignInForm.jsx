@@ -1,4 +1,4 @@
-import '../Components/SignInForm.css';
+import './SignInForm.css';
 
 function SignInForm () {
     return (

@@ -1,8 +1,8 @@
-import HeroImg from '../assets/Images/bank-tree.jpeg';
-import ChatIcon from '../assets/Images/icon-chat.png';
-import MoneyIcon from '../assets/Images/icon-money.png';
-import SecurityIcon from '../assets/Images/icon-security.png';
-import '../Pages/Home.css';
+import HeroImg from '../../assets/Images/bank-tree.jpeg';
+import ChatIcon from '../../assets/Images/icon-chat.png';
+import MoneyIcon from '../../assets/Images/icon-money.png';
+import SecurityIcon from '../../assets/Images/icon-security.png';
+import './Home.css';
 
 function Home () {
     return (

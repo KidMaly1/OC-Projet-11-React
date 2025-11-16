@@ -1,4 +1,4 @@
-import '../Pages/Transaction.css';
+import './Transaction.css';
 
 function Transaction () {
     return (

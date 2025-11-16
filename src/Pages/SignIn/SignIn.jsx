@@ -1,6 +1,6 @@
 import { Form } from 'react-router-dom';
-import SignInForm from '../Components/SignInForm';
-import '../Pages/SignIn.css';
+import SignInForm from '../../Components/SignInForm/SignInForm';
+import './SignIn.css';
 
 function SignIn () {
     return (

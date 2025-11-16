@@ -1,4 +1,4 @@
-import '../Pages/User.css';
+import './User.css';
 import { NavLink } from 'react-router-dom';
 
 function User () {

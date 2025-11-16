@@ -1,12 +1,12 @@
-import Header from "./Components/Header";
-import Home from "./Pages/Home";
-import Footer from "./Components/Footer";
-import SignIn from "./Pages/SignIn";
-import SignInForm from "./Components/SignInForm";
+import Header from "./Components/Header/Header";
+import Home from "./Pages/Home/Home";
+import Footer from "./Components/Footer/Footer";
+import SignIn from "./Pages/SignIn/SignIn";
+import SignInForm from "./Components/SignInForm/SignInForm";
 import { Routes, Route } from 'react-router-dom';
-import User from "./Pages/User";
-import Edit from "./Pages/Edit";
-import Transaction from "./Pages/Transaction";
+import User from "./Pages/User/User";
+import Edit from "./Pages/Edit/Edit";
+import Transaction from "./Pages/Transaction/Transaction";
 
 function App() {
   return (

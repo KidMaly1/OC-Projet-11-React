@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import User from "./Pages/User/User";
 import Edit from "./Pages/Edit/Edit";
 import Transaction from "./Pages/Transaction/Transaction";
+import TestAPI from "./Components/TestAPI";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/User" element={<User />} />
       <Route path="/Edit" element={<Edit />} />
       <Route path="/Transaction" element={<Transaction />} />
+      <Route path="/TestAPI" element={<TestAPI />} />
     </Routes>
     
     <Footer />

@@ -1,4 +1,6 @@
 import './SignInForm.css';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function SignInForm () {
     return (
@@ -7,24 +9,24 @@ function SignInForm () {
             <div className="form">
                 <h1>Sign In</h1>
 
-                <div class="input-wrapper">
-                    <label for="username">Username</label>
+                <div className="input-wrapper">
+                    <label htmlFor="username">Username</label>
                     <input type="text" id="username" />
                 </div>
 
-                <div class="input-wrapper">
-                    <label for="password">Password</label>
+                <div className="input-wrapper">
+                    <label htmlFor="password">Password</label>
                     <input type="password" id="password" />
                 </div>
 
             </div>
 
-                <div class="input-remember">
-                    <label for="remember-me">Remember me</label>
+                <div className="input-remember">
+                    <label htmlFor="remember-me">Remember me</label>
                     <input type="checkbox" id="remember-me" />
                 </div>
 
-                <a href="./user.html" class="sign-in-button">Sign In</a>
+                <button type="submit" className="sign-in-button">Sign In</button>
             
         </div>
     )

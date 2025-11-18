@@ -8,13 +8,13 @@ function Header () {
         <div className="main-nav">
 
             <NavLink to="/">
-                <a className="main-nav-logo">
+                <div className="main-nav-logo">
                     <img className="main-nav-logo-image" src={Logo} alt="Logo Image"></img>
-                </a>
+                </div>
             </NavLink>
                 
             <NavLink to="/SignIn">
-                <p className="main-nav-item"><i class="fa fa-user-circle"></i>Sign In</p>
+                <p className="main-nav-item"><i className="fa fa-user-circle"></i>Sign In</p>
             </NavLink>
             
         </div>

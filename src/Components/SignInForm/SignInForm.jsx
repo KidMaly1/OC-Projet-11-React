@@ -11,7 +11,7 @@ function SignInForm () {
 
                 <div className="input-wrapper">
                     <label htmlFor="username">Username</label>
-                    <input type="text" id="username" />
+                    <input type="email" id="username" />
                 </div>
 
                 <div className="input-wrapper">

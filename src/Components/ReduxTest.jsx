@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setCredentials, logOut } from '../store/user/authSlice';
+import { setCredentials, logOut } from '../store/Reducers/authSlice';
 
 const ReduxTest = () => {
   const dispatch = useDispatch();

@@ -1,14 +1,18 @@
 import './User.css';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function User () {
+
+    const user = useSelector((state) => state.auth.user);
+
     return (
         <div className="user-container">
 
             <main className="main bg-dark">
 
                 <div className="header">
-                    <h1>Welcome Back, Tony Jarvis!</h1>
+                    <h1>Welcome Back, {user ?.userName}!</h1>
                     <NavLink to="/Edit">
                         <button className="edit-button">Edit Name</button>
                     </NavLink>

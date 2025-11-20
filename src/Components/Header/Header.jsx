@@ -1,15 +1,16 @@
 import Logo from '../../assets/Images/argentBankLogo.png';
 import './Header.css';
 import { NavLink } from 'react-router-dom';
-import { logOut } from '../../store/user/authSlice';
+import { logOut, setCredentials } from '../../store/Reducers/authSlice';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+/*import { setCredentials } from '../../store/user/authSlice'; */
 
 function Header () {
 
     const token = useSelector((state) => state.auth.token);
-    const user = useSelector((state) => state.auth.user); 
+    const user = useSelector((state) => state.auth.user);  // Pour l'affichage du username
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -23,8 +24,12 @@ function Header () {
     let authButton;
 
         if (token) {
+            /*dispatch(setCredentials(
+                user: { username },
+            ))*/
             authButton = (
-                <p className="main-nav-item" onClick={handleLogout} style={{ cursor: "pointer" }}>
+                
+                <p className="main-nav-item" onClick={handleLogout} style={{ cursor: "pointer" }}> {user.userName}
                     <i className="fa fa-user-circle"></i> Sign Out 
                 </p> 
             );

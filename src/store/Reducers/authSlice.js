@@ -5,15 +5,15 @@ const initialState = {
   token: null,
 };
 
-const authSlice = createSlice({
+const authSlice = createSlice({ // Slice pour gérer l'état de la connexion
   name: 'auth',
   initialState,
   reducers: {
-    setCredentials: (state, action) => {
-      state.user = action.payload.user;
+    setCredentials: (state, action) => { // Reducer pour se connecter
+      state.user = action.payload.user; // Données
       state.token = action.payload.token;
     },
-    logOut: (state) => {
+    logOut: (state) => { // Reducer pour se déconnecter
       state.user = null;
       state.token = null;
     },

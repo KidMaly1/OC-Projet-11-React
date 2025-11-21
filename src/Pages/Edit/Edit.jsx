@@ -1,6 +1,26 @@
 import './Edit.css';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateUserName } from '../../store/Reducers/userReducer/userThunks'; // action Redux pour le changement de userName
+
 
 function Edit () {
+
+ const dispatch = useDispatch();
+ const token = useSelector((state) => state.auth.token);
+ const user = useSelector((state) => state.auth.user);
+
+  const [username, setUsername] = useState(user?.userName || '');
+  const [firstName] = useState(user?.firstName || '');
+  const [lastName] = useState(user?.lastName || '');
+
+  const handleSave = (e) => {
+    e.preventDefault();
+    if (username.trim() && token) {
+        dispatch(updateUserName(token, username));
+    }
+    };
+
     return (
         <div className="edit-container">
 
@@ -9,25 +29,25 @@ function Edit () {
                 <section className="user-edit-content">
                     <h1>Edit user info</h1>
 
-                <div className="user-edit-form">
+                <form className="user-edit-form">
                     <div className="user-input-wrapper">
                     <label htmlFor="username">User name</label>
-                    <input type="text" id="username" />
+                    <input onChange={(e) => setUsername(e.target.value)} value={username} type="text" id="username" />
                     </div>
                     <div className="user-input-wrapper">
                     <label htmlFor="username">First name</label>
-                    <input type="text" id="firstname" />
+                    <input type="text" id="firstname" value={firstName} disabled />
                     </div>
                     <div className="user-input-wrapper">
                     <label htmlFor="username">Last name</label>
-                    <input type="text" id="lastname" />
+                    <input type="text" id="lastname" value={lastName} disabled />
                     </div>
 
                     <div className="edit-buttons">
-                        <a href="./user.html" className="edit-name-button">Save</a>
-                        <a href="./user.html" className="edit-name-button">Cancel</a>
+                        <button onClick={handleSave} className="edit-name-button">Save</button>
+                        <button onClick={() => setUsername(user?.userName || '')} className="edit-name-button">Cancel</button>
                     </div>
-                </div>
+                </form>
 
                 </section>
 

@@ -49,3 +49,30 @@ export async function fetchUserProfile(token) {
     return { success: false, error };
   }
 }
+
+export async function updateProfileUserName(token, userName) {
+    try {
+    const response = await fetch('http://localhost:3001/api/v1/user/profile', {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        },
+      body: JSON.stringify({ userName }),
+    });
+
+    const data = await response.json();
+    console.log('📡 Réponse brute du backend :', data);
+
+      if(response.ok) {
+       return { success: true, data: data.body };
+      } else {
+       console.error('Erreur de mise à jour :', data.message);
+       return { success: false, error: data.message };
+      }
+
+    } catch (error) {
+      console.error('Erreur réseau :', error);
+      return { success: false, error };
+    }
+}

@@ -2,7 +2,7 @@ import './SignInForm.css';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { loginAndFetchProfile } from '../../store/Reducers/userReducer/userActions.js'; // nouvelle action
+import { loginAndFetchProfile } from '../../store/Reducers/userReducer/userActions.js'; 
 
 function SignInForm() {
   const [email, setEmail] = useState('');
@@ -16,7 +16,7 @@ function SignInForm() {
 
     try {
       await dispatch(loginAndFetchProfile({ email, password }));
-      console.log(`✅ Connexion + chargement profil réussis pour ${email}`);
+      console.log(`✅ Connexion et chargement profil réussis pour ${email}`);
       navigate('/User');
     } catch (error) {
       console.error('Erreur lors de la connexion ou du chargement du profil :', error);

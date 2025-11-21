@@ -1,4 +1,4 @@
-import { loginUser, fetchUserProfile } from './userApi';
+import { loginUser, fetchUserProfile, updateProfileUserName } from './userApi';
 import { setCredentials } from '../authSlice';
 
 export const loginAndFetchProfile = ({ email, password }) => async (dispatch) => {
@@ -20,3 +20,4 @@ export const loginAndFetchProfile = ({ email, password }) => async (dispatch) =>
     console.error('Erreur connexion :', loginResult.error);
   }
 };
+

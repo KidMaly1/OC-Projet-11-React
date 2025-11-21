@@ -5,7 +5,7 @@ import { logOut, setCredentials } from '../../store/Reducers/authSlice';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-/*import { setCredentials } from '../../store/user/authSlice'; */
+
 
 function Header () {
 

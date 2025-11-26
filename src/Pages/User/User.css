@@ -1,6 +1,6 @@
 .user-bg-dark {
     background-color: #12002b;
-    height: 680px;
+    height: 730px;
 } 
 
 .header {
@@ -10,6 +10,10 @@
   align-items: center;
   color: #fff;
   margin-bottom: 2rem;
+}
+
+.header h1 {
+  text-align: center;
 }
 
 .edit-button {
@@ -88,6 +92,6 @@
   }
 
   .user-bg-dark {
-    height: 848px;
+    height: 900px;
   }
 }

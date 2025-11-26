@@ -37,7 +37,7 @@
 
 .edit-name-button {
   display: block;
-  width: 100%;
+  width: 9rem;
   padding: 8px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -46,6 +46,7 @@
   background-color: #00bc77;
   color: #fff;
   text-align: center;
+  text-decoration: none;
 }
 
 .user-account {
@@ -56,7 +57,7 @@
   background-color: #fff;
   width: 80%;
   margin: 0 auto;
-  flex-direction: column;
+  
   padding: 1.5rem;
   box-sizing: border-box;
   text-align: left;

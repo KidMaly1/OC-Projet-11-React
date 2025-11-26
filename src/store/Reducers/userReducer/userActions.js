@@ -13,11 +13,13 @@ export const loginAndFetchProfile = ({ email, password }) => async (dispatch) =>
         token,
         user: profileResult.data,
       }));
+      return { success: true };
     } else {
       console.error('Erreur chargement profil :', profileResult.error);
     }
   } else {
     console.error('Erreur connexion :', loginResult.error);
+    return { success: false };
   }
 };
 

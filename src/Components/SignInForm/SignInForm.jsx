@@ -9,23 +9,34 @@ function SignInForm() {
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState('');
   const user = useSelector((state) => state.auth.user);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+      e.preventDefault();
+      setErrorMessage('');
 
-    try {
-      await dispatch(loginAndFetchProfile({ email, password }));
-      console.log(`✅ Connexion et chargement profil réussis pour ${email}`);
-      navigate('/User');
-    } catch (error) {
-      console.error('Erreur lors de la connexion ou du chargement du profil :', error);
-    }
+      try {
+        const result = await dispatch(loginAndFetchProfile({ email, password }));
+
+        if (result?.success) {
+          console.log(`✅ Connexion réussie pour ${email}`);
+          navigate('/User');
+        } else {
+          setErrorMessage('Identifiants incorrects. Veuillez réessayer.');
+        }
+      } catch (error) {
+        console.error('Erreur lors de la connexion :', error);
+        setErrorMessage('Une erreur est survenue. Veuillez réessayer.');
+      }
   };
 
   return (
     <div className="content">
       {user && <p className="welcome-message">✅ Bienvenue, {user.email} !</p>}
+    {/* Message d'erreur si les identifiants sont incorrects*/}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
+
 
       <form onSubmit={handleSubmit} className="form-container">
         <div className="form">

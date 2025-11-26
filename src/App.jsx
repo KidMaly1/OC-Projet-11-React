@@ -8,6 +8,7 @@ import Edit from "./Pages/Edit/Edit";
 import Transaction from "./Pages/Transaction/Transaction";
 import SignInForm from "./Components/SignInForm/SignInForm";
 import ReduxTest from "./Components/ReduxTest";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 
 function App() {
@@ -17,10 +18,10 @@ function App() {
     <Header />
 
     <Routes>
-      <Route exact path="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/SignIn" element={<SignIn />} />
       <Route path="/SignInForm" element={<SignInForm />} />
-      <Route path="/User" element={<User />} />
+      <Route path="/User" element={<PrivateRoute><User /></PrivateRoute>} />
       <Route path="/Edit" element={<Edit />} />
       <Route path="/Transaction" element={<Transaction />} />
       <Route path="/ReduxTest" element={<ReduxTest />} />

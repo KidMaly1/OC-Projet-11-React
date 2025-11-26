@@ -12,7 +12,7 @@ function User () {
             <main className="main user-bg-dark">
 
                 <div className="header">
-                    <h1>Welcome Back, {user ?.userName}!</h1>
+                    <h1>Welcome Back <br></br>{user ?.userName}!</h1>
                     <NavLink to="/Edit">
                         <button className="edit-button">Edit Name</button>
                     </NavLink>

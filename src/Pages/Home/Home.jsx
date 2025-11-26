@@ -1,4 +1,4 @@
-import HeroImg from '../../assets/Images/bank-tree.jpeg';
+import HeroImg from '../../assets/Images/bank-tree1.webp';
 import ChatIcon from '../../assets/Images/icon-chat.png';
 import MoneyIcon from '../../assets/Images/icon-money.png';
 import SecurityIcon from '../../assets/Images/icon-security.png';
@@ -20,7 +20,7 @@ function Home () {
                     <p className="text">Open a savings account with Argent Bank today!</p>
                 </section>
             </div>
-
+    
             <section className="features">
 
                 <div className="feature-item">

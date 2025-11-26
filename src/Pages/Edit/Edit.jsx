@@ -1,23 +1,25 @@
 import './Edit.css';
+import arrow from '../../assets/Images/arrow_right.png';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUserName } from '../../store/Reducers/userReducer/userThunks'; // action Redux pour le changement de userName
-
+import { useNavigate } from 'react-router-dom';
 
 function Edit () {
 
  const dispatch = useDispatch();
  const token = useSelector((state) => state.auth.token);
  const user = useSelector((state) => state.auth.user);
+ const navigate = useNavigate();
 
   const [username, setUsername] = useState(user?.userName || '');
   const [firstName] = useState(user?.firstName || '');
   const [lastName] = useState(user?.lastName || '');
 
-  const handleSave = (e) => {
+  const handleSave = async (e) => {
     e.preventDefault();
     if (username.trim() && token) {
-        dispatch(updateUserName(token, username));
+       await dispatch(updateUserName(token, username));
     }
     };
 
@@ -45,7 +47,9 @@ function Edit () {
 
                     <div className="edit-buttons">
                         <button onClick={handleSave} className="edit-name-button">Save</button>
-                        <button onClick={() => setUsername(user?.userName || '')} className="edit-name-button">Cancel</button>
+                    
+                        <button onClick={() => navigate('/User')} type="button" className="edit-name-button">Cancel</button>
+                    
                     </div>
                 </form>
 
@@ -57,6 +61,7 @@ function Edit () {
                     <p className="user-account-amount">$2,082.79</p>
                     <p className="user-account-amount-description">Available Balance</p>
                     </div>
+                    <img src={arrow} className="transaction-arrow" alt="arrow"></img>
                 </section>
                 <section className="user-account">
                     <div className="user-account-content-wrapper">
@@ -64,6 +69,7 @@ function Edit () {
                     <p className="user-account-amount">$2,082.79</p>
                     <p className="user-account-amount-description">Available Balance</p>
                     </div>
+                    <img src={arrow} className="transaction-arrow" alt="arrow"></img>
                 </section>
                 <section className="user-account">
                     <div className="user-account-content-wrapper">
@@ -71,6 +77,7 @@ function Edit () {
                     <p className="user-account-amount">$2,082.79</p>
                     <p className="user-account-amount-description">Available Balance</p>
                     </div>
+                    <img src={arrow} className="transaction-arrow" alt="arrow"></img>
                 </section>
 
             </main>

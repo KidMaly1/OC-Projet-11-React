@@ -1,8 +1,14 @@
-.bg-dark {
+.signin-bg-dark {
   background-color: #12002b;
   height: 600px;
 }
 
 .sign-in-content {
     padding-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .signin-bg-dark {
+    height: 758px;
+  }
 }

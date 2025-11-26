@@ -35,8 +35,8 @@ function Header () {
             );
         } else {
             authButton = (
-                <NavLink to="/SignIn">
-                    <p className="main-nav-item">
+                <NavLink to="/SignIn" className="main-nav-item">
+                    <p>
                         <i className="fa fa-user-circle"></i> Sign In
                     </p>
                 </NavLink>

@@ -17,4 +17,5 @@
 
 .main-nav-item {
   text-decoration: none;
+  color: inherit;
 }

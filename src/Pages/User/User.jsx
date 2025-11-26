@@ -9,7 +9,7 @@ function User () {
     return (
         <div className="user-container">
 
-            <main className="main bg-dark">
+            <main className="main user-bg-dark">
 
                 <div className="header">
                     <h1>Welcome Back, {user ?.userName}!</h1>

@@ -1,4 +1,4 @@
-.bg-dark {
+.user-bg-dark {
     background-color: #12002b;
     height: 680px;
 } 
@@ -28,7 +28,7 @@
   background-color: #fff;
   width: 80%;
   margin: 0 auto;
-  flex-direction: column;
+  flex-direction: row;
   padding: 1.5rem;
   box-sizing: border-box;
   text-align: left;
@@ -57,9 +57,14 @@
   margin: 0;
 }
 
+.account-content-wrapper.cta {
+  display: flex;
+  justify-content: end;
+}
+
 .transaction-button {
   display: block;
-  width: 100%;
+  width: 200px;
   padding: 8px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -69,9 +74,9 @@
   color: #fff;
 }
 
-@media (min-width: 720px) {
+@media (max-width: 768px) {
   .account {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .account-content-wrapper.cta {
@@ -79,6 +84,10 @@
   }
 
   .transaction-button {
-    width: 200px;
+    width: 100%;
+  }
+
+  .user-bg-dark {
+    height: 848px;
   }
 }

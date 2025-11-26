@@ -6,7 +6,7 @@ function SignIn () {
     return (
         <div className="sign-in-container">
 
-            <main className="main bg-dark">
+            <main className="main signin-bg-dark">
                 <section className="sign-in-content">
                     <SignInForm />
                 </section>

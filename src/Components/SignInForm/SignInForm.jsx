@@ -29,6 +29,7 @@ function SignInForm() {
 
       <form onSubmit={handleSubmit} className="form-container">
         <div className="form">
+          <i className="fa fa-user-circle"></i>
           <h1>Sign In</h1>
 
           <div className="input-wrapper">
